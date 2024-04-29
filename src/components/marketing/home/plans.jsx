@@ -63,7 +63,7 @@ const plans = [
   },
 ];
 
-export function nPlans() {
+export function Plans() {
   return (
     <motion.section
       initial={{ opacity: 0 }}

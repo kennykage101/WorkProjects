@@ -56,8 +56,8 @@ export function MobileNav({ onClose, open }) {
       </Stack>
       <Stack spacing={2} sx={{ p: '16px' }}>
         <NavItem href={paths['home']} pathname={pathname} title="Home" />
-        <NavItem external href="https://docs.lotru.devias.io" pathname={pathname} title="Documentation" />
-        <NavItem href={paths['dashboard']} pathname={pathname} title="Dashboard" />
+        <NavItem external href="https://docs.lotru.devias.io" pathname={pathname} title="Search Flights" />
+        <NavItem href={paths['dashboard']} pathname={pathname} title="Book Flights" />
       </Stack>
     </Drawer>
   );

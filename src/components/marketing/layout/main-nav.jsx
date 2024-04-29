@@ -64,8 +64,8 @@ export function MainNav() {
             sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}
           >
             <NavItem href={paths['home']} pathname={pathname} title="Home" />
-            <NavItem external href="https://docs.lotru.devias.io" pathname={pathname} title="Documentation" />
-            <NavItem href={paths['dashboard']} pathname={pathname} title="Dashboard" />
+            <NavItem external href="https://docs.lotru.devias.io" pathname={pathname} title="Flights" />
+            <NavItem href={paths['dashboard']} pathname={pathname} title="Book Flights" />
           </Stack>
           <Stack direction="row" spacing={2} sx={{ alignItems: 'center', justifyContent: 'flex-end' }}>
             <NoSSR>

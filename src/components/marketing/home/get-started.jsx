@@ -119,7 +119,7 @@ export function GetStarted() {
                       overflow: 'hidden',
                     }}
                   >
-                    <Image alt="demo" height={183} src="/assets/home-floating-image-1.png" width={263} />
+                    <Image alt="demo" height={183} src="/assets/alexander-schimmeck-DSOohFTAfno-unsplash.jpg" width={263} />
                   </Box>
                 </Box>
               </motion.div>
@@ -151,7 +151,7 @@ export function GetStarted() {
                       overflow: 'hidden',
                     }}
                   >
-                    <Image alt="demo" height={232} src="/assets/home-floating-image-2.png" width={180} />
+                    <Image alt="demo" height={232} src="/assets/krakenimages-FywFo9bHbLo-unsplash (1).jpg" width={180} />
                   </Box>
                 </Box>
               </motion.div>

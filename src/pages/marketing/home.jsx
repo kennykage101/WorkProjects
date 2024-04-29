@@ -11,7 +11,7 @@ import { Plans } from '@/components/marketing/home/plans';
 import { Reviews } from '@/components/marketing/home/reviews';
 
 const metadata = {
-  title: `Your preferred travel solutions | ${config.site.name}`,
+  title: `${config.site.name} | Your preferred travel solutions`,
 };
 
 export function Page() {
