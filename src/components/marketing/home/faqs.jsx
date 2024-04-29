@@ -14,13 +14,13 @@ import { config } from '@/config';
 const faqs = [
   {
     id: 1,
-    question: `How many projects can I build with ${config.site.name}?`,
+    question: `How many flights can I book with ${config.site.name}?`,
     response:
       "The license is per project (domain), but if you intend to develop an unknown number of projects feel free to contact us and we'll find a solution.",
   },
   {
     id: 2,
-    question: 'Can I use the template for commercial purposes?',
+    question: 'Can I use the website for commercial flights?',
     response:
       'Absolutely! If you intend to charge users for using your product Extended license is created specifically for this context.',
   },

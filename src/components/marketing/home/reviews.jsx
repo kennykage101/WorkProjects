@@ -14,13 +14,13 @@ const reviews = [
     id: 1,
     author: 'Nalin Wijayasinghe',
     comment:
-      'I highly recommend purchasing this template. The author is very supportive and responds quickly to questions.',
+      'I highly recommend trying out Hayaan. The site is so intuitive and satisfies every of my demands.',
   },
   {
     id: 2,
     author: 'Victor Smith',
     comment:
-      'This template is well organized, easy to understand and also easy to add other componets. Another big 5 star factor is the support from the team. I had several questions before purchasing and they were all answered promptly with code examples.',
+      'This site is well organized, easy to understand and also easy to navigate. Another big 5 star factor is the support from the team. I had several questions before booking and they were all answered promptly with illustrations.',
   },
   {
     id: 3,
@@ -32,13 +32,13 @@ const reviews = [
     id: 4,
     author: 'Laurence Bedford',
     comment:
-      'This template is not only amazing, the support that comes with it is impeccable. I wanted to integrate another auth provider and was running into some issues. The support went above and beyond to help me with my integration and it works seemlessly.',
+      'Hayaan is not only amazing, the support that comes with it is impeccable. I wanted to correct an error and was running into some issues. The support went above and beyond to help me with my booking and it works seemlessly.',
   },
   {
     id: 5,
     author: 'Vedad Burgic',
     comment:
-      'This template is amazing. It is going to reduce lot of boilerplate code from my side and speed up my new SaaS.',
+      'This website is amazing. It is going to reduce lot of booking stress from my side and speed up my arrival.',
   },
   {
     id: 6,
@@ -74,7 +74,7 @@ export function Reviews() {
                 Reviews
               </Typography>
               <Typography level="h1" textAlign="center">
-                What are our customers are saying
+                What are our customers saying
               </Typography>
             </Stack>
             <Grid container spacing={3}>

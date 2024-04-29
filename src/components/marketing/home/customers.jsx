@@ -42,7 +42,7 @@ export function Customers() {
             </Ticker>
           </Box>
           <Typography fontSize="xl" textAlign="center" textColor="text.secondary">
-            Devias products are used by over 10,000+ companies across the globe
+            Hayaan travel solutions is used by over 10,000+ companies across the globe
           </Typography>
         </Stack>
       </Container>

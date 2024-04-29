@@ -54,7 +54,7 @@ export function Hero() {
         <Box
           sx={{
             // You might like it, so remove the display: 'none'
-            display: 'none',
+            display: 'block',
             height: '500px',
             left: '50%',
             pointerEvents: 'none',
@@ -84,7 +84,7 @@ export function Hero() {
                 textAlign="center"
                 textColor="inherit"
               >
-                {config.site.name} Dashboard: Redefining SaaS Product Management
+                {config.site.name} Dashboard: Your Preferred Travel Solutions
               </Typography>
               <Typography
                 fontSize={{
@@ -96,8 +96,7 @@ export function Hero() {
                 textAlign="center"
                 textColor="neutral.400"
               >
-                Premium template that comes with ready-to-use Joy UI components, developed to help you build apps faster
-                and with a beautiful design.
+                Take your journey to the next level with Hayaan Travel solutions. The sky is just the beginning
               </Typography>
               <Stack direction="row" spacing={3} sx={{ justifyContent: 'center' }}>
                 <Button
@@ -112,10 +111,10 @@ export function Hero() {
                     },
                   }}
                 >
-                  Purchase
+                  Search Flights
                 </Button>
                 <Button component={RouterLink} href={paths['dashboard']}>
-                  Live Demo
+                  Book Flights
                 </Button>
               </Stack>
             </Stack>
@@ -160,11 +159,11 @@ export function Hero() {
             }}
           >
             <Image
-              alt="screen"
+              alt="travellers"
               fill
               priority
               sizes="1152px"
-              src="/assets/hero-screen.png"
+              src="/assets/travellers_going_to_airport.webp"
               style={{ objectFit: 'cover' }}
             />
           </Box>

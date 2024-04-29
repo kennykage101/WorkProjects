@@ -4,7 +4,7 @@ import { LogLevel } from '@/lib/logger';
 
 export const config = {
   site: {
-    name: 'Lotru',
+    name: 'Hayaan',
     description: '',
     colorScheme: 'light',
     themeColor: '#0e0f11',

@@ -14,8 +14,8 @@ import { Image } from '@/components/core/image';
 const features = [
   {
     id: 1,
-    title: 'Built by experts',
-    description: "All of the code follows MUI best practices, it's written by our in-house team of experts.",
+    title: 'Lorem ipsum dolor',
+    description: "Aliquam laoreet ex metus, ac gravida enim rutrum quis. Etiam nec erat lobortis.",
     icon: (
       <svg fill="none" height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
         <rect fill="white" height="47" rx="11.5" width="47" x="1.5" y="1.5" />
@@ -37,9 +37,9 @@ const features = [
   },
   {
     id: 2,
-    title: 'Design Files',
+    title: 'mattis velit',
     description:
-      "We've included the source Figma files to Plus & Extended licenses so you can get creative! Build layouts with confidence.",
+      "Nulla elementum dui nisl, sed malesuada massa fermentum eget. Nunc vestibulum eleifend metus.",
     icon: (
       <svg fill="none" height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
         <rect fill="white" height="47" rx="11.5" width="47" x="1.5" y="1.5" />
@@ -61,9 +61,9 @@ const features = [
   },
   {
     id: 3,
-    title: 'Latest technologies',
+    title: 'Suspendisse eu lacinia',
     description:
-      "Each template is a well-structured Next.js project, giving you a codebase that's productive and enjoyable to work in.",
+      "Donec molestie tincidunt dolor, sit amet efficitur nisl dapibus at. Sed sed fringilla lacus.",
     icon: (
       <svg fill="none" height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
         <rect fill="white" height="47" rx="11.5" width="47" x="1.5" y="1.5" />
@@ -85,9 +85,9 @@ const features = [
   },
   {
     id: 4,
-    title: 'Easy to customize',
+    title: 'Curabitur ante justo',
     description:
-      'Everything is styled using global theme overrides, just open the theme file in your editor and change whatever you want.',
+      'Nullam ac ultricies tellus. Praesent purus quam, imperdiet id ante ac, condimentum tempor ipsum.',
     icon: (
       <svg fill="none" height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
         <rect fill="white" height="47" rx="11.5" width="47" x="1.5" y="1.5" />

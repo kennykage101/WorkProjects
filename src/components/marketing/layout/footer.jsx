@@ -16,8 +16,7 @@ export function Footer() {
           <Stack spacing={2} sx={{ maxWidth: 'sm' }}>
             <DynamicLogo colorDark="light" colorLight="dark" height={16} width={77} />
             <Typography level="body-sm">
-              Unlock the power of development analytics and gain actionable insights to make informed business
-              decisions.
+            Unlock the power of safe travels, quick flights and experience divine-like comfort with Hayaan.
             </Typography>
           </Stack>
         </Box>

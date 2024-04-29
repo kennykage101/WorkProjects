@@ -28,8 +28,7 @@ export function GetStarted() {
               </Typography>
               <Typography level="h1">Start your {config.site.name} journey today.</Typography>
               <Typography fontSize="xl" textColor="text.secondary">
-                Unlock the power of development analytics and gain actionable insights to make informed business
-                decisions.
+                Unlock the power of safe travels, quick flights and experience divine-like comfort with Hayaan.
               </Typography>
             </Stack>
           </Grid>

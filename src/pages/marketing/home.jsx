@@ -11,7 +11,7 @@ import { Plans } from '@/components/marketing/home/plans';
 import { Reviews } from '@/components/marketing/home/reviews';
 
 const metadata = {
-  title: `Redefining SaaS Product Management | ${config.site.name}`,
+  title: `Your preferred travel solutions | ${config.site.name}`,
 };
 
 export function Page() {
