@@ -103,7 +103,7 @@ export function MainNav() {
                 },
               }}
             >
-              Purchase
+              History
             </Button>
           </Stack>
         </Box>
