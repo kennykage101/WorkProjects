@@ -3,7 +3,6 @@ import Container from '@mui/joy/Container';
 import Grid from '@mui/joy/Grid';
 import Stack from '@mui/joy/Stack';
 import Typography from '@mui/joy/Typography';
-import dayjs from 'dayjs';
 import { Helmet } from 'react-helmet-async';
 
 import { config } from '@/config';

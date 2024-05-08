@@ -64,8 +64,8 @@ export function MainNav() {
             sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}
           >
             <NavItem href={paths['home']} pathname={pathname} title="Home" />
-            <NavItem external href="https://docs.lotru.devias.io" pathname={pathname} title="Flights" />
-            <NavItem href={paths['dashboard']} pathname={pathname} title="Book Flights" />
+            <NavItem  href={paths['search-flight']} pathname={pathname} title="Flights" />
+            <NavItem href={paths['dashboard']} pathname={pathname} title="Login" />
           </Stack>
           <Stack direction="row" spacing={2} sx={{ alignItems: 'center', justifyContent: 'flex-end' }}>
             <NoSSR>
@@ -90,7 +90,7 @@ export function MainNav() {
             </IconButton>
             <Button
               component="a"
-              href="https://mui.com/store/items/lotru"
+              href=""
               sx={{
                 bgcolor: 'var(--joy-palette-common-white)',
                 color: 'var(--joy-palette-neutral-900)',

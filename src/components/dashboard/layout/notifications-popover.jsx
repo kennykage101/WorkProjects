@@ -11,12 +11,11 @@ import Sheet from '@mui/joy/Sheet';
 import Stack from '@mui/joy/Stack';
 import { styled } from '@mui/joy/styles';
 import Typography from '@mui/joy/Typography';
-import dayjs from 'dayjs';
 
 const notifications = [
   {
     id: 'EV-001',
-    createdAt: dayjs().subtract(5, 'minute').valueOf(),
+    // createdAt: dayjs().subtract(5, 'minute').valueOf(),
     read: false,
     type: 'follow',
     avatar: '/assets/avatar-3.png',
@@ -24,7 +23,7 @@ const notifications = [
   },
   {
     id: 'EV-002',
-    createdAt: dayjs().subtract(3, 'hours').valueOf(),
+    // createdAt: dayjs().subtract(3, 'hours').valueOf(),
     read: false,
     type: 'mention',
     avatar: '/assets/avatar-1.png',
@@ -33,7 +32,7 @@ const notifications = [
   },
   {
     id: 'EV-003',
-    createdAt: dayjs().subtract(2, 'days').valueOf(),
+    // createdAt: dayjs().subtract(2, 'days').valueOf(),
     read: true,
     type: 'project_invite',
     avatar: '/assets/avatar-4.png',

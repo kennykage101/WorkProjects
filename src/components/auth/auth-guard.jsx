@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Alert from '@mui/joy/Alert';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 import { config } from '@/config';
 import { paths } from '@/paths';
@@ -14,6 +14,7 @@ export function AuthGuard({ children }) {
   const navigate = useNavigate();
   const { user, error, isLoading } = useUser();
   const [isChecking, setIsChecking] = React.useState(true);
+ 
 
   const checkPermissions = async () => {
     if (isLoading) {
@@ -30,7 +31,7 @@ export function AuthGuard({ children }) {
 
       switch (config.auth.strategy) {
         case AuthStrategy.CUSTOM: {
-          navigate(paths['auth.custom.sign-in']);
+          // navigate(`${paths['auth.custom.sign-in']}?type=${isUser ? 'user' : 'agent'}`);
           return;
         }
         case AuthStrategy.SUPABASE: {

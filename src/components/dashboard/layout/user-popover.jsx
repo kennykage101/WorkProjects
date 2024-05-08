@@ -59,7 +59,7 @@ export function UserPopover({ anchorEl, onClose, open }) {
           toast.error('Something went wrong, unable to sign out');
         }
 
-        redirectTo = paths['auth.custom.sign-in'];
+        redirectTo = paths['home'];
         break;
       }
       case AuthStrategy.SUPABASE: {

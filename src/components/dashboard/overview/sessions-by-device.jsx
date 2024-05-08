@@ -6,7 +6,6 @@ import Card from '@mui/joy/Card';
 import Sheet from '@mui/joy/Sheet';
 import Stack from '@mui/joy/Stack';
 import Typography from '@mui/joy/Typography';
-import { Cell, Label, Pie, PieChart, Tooltip } from 'recharts';
 
 import { NoSSR } from '@/components/core/no-ssr';
 
@@ -19,25 +18,7 @@ export function SessionsByDevice({ total, data = [] }) {
       <Typography level="h4">Sessions by Device</Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <NoSSR fallback={<Box sx={{ height: `${chartSize}px`, width: `${chartSize}px` }} />}>
-          <PieChart height={chartSize} margin={{ top: 0, right: 0, bottom: 0, left: 0 }} width={chartSize}>
-            <Pie
-              animationDuration={300}
-              cx={chartSize / 2}
-              cy={chartSize / 2}
-              data={data}
-              dataKey="value"
-              innerRadius={chartSize / 2 - chartTickness}
-              nameKey="name"
-              outerRadius={chartSize / 2}
-              strokeWidth={0}
-            >
-              {data.map((entry) => (
-                <Cell fill={entry.color} key={entry.name} />
-              ))}
-              <Label content={<LabelContent label="Total" value={total} />} position="center" />
-            </Pie>
-            <Tooltip animationDuration={200} content={<TooltipContent />} />
-          </PieChart>
+          Sorry
         </NoSSR>
       </Box>
       <Legend payload={data} />

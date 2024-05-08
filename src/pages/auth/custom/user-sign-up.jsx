@@ -6,9 +6,11 @@ import TabList from '@mui/joy/TabList';
 import Tabs from '@mui/joy/Tabs';
 import { Helmet } from 'react-helmet-async';
 
+// import { useSearchParams } from 'react-router-dom';
+
 import { config } from '@/config';
 import { paths } from '@/paths';
-import { SignUpForm } from '@/components/auth/custom/sign-up-form';
+import { UserSignUpForm } from '@/components/auth/custom/user-sign-up-form';
 import { SplitLayout } from '@/components/auth/split-layout';
 import { RouterLink } from '@/components/core/link';
 import { DynamicLogo } from '@/components/core/logo';
@@ -18,6 +20,10 @@ const metadata = {
 };
 
 export function Page() {
+  //   const [searchParams] = useSearchParams();
+  // const login = searchParams.get('login');
+  //   const type = searchParams.get('type');
+
   return (
     <React.Fragment>
       <Helmet>
@@ -32,15 +38,15 @@ export function Page() {
           </Stack>
           <Tabs value="sign-up" variant="custom">
             <TabList>
-              <Tab component={RouterLink} href={paths['auth.custom.sign-in']} value="sign-in">
+              <Tab component={RouterLink} href={`${paths['auth.custom.sign-in.user']}`} value="sign-in">
                 Sign In
               </Tab>
-              <Tab component={RouterLink} href={paths['auth.custom.sign-up']} value="sign-up">
+              <Tab component={RouterLink} href={paths['auth.custom.sign-up.user']} value="sign-up">
                 Create Account
               </Tab>
             </TabList>
           </Tabs>
-          <SignUpForm />
+          <UserSignUpForm />
         </Stack>
       </SplitLayout>
     </React.Fragment>

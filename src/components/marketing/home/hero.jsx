@@ -1,6 +1,8 @@
 'use client';
 
 import * as React from 'react';
+import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
+import { Dropdown, Menu, MenuButton, MenuItem } from '@mui/joy';
 import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
 import Container from '@mui/joy/Container';
@@ -102,7 +104,7 @@ export function Hero() {
                 <Button
                   color="neutral"
                   component="a"
-                  href="https://mui.com/store/items/lotru"
+                  href="#"
                   sx={{
                     bgcolor: 'var(--joy-palette-common-white)',
                     color: 'var(--joy-palette-neutral-900)',
@@ -113,9 +115,19 @@ export function Hero() {
                 >
                   Search Flights
                 </Button>
-                <Button component={RouterLink} href={paths['dashboard']}>
-                  Book Flights
-                </Button>
+                <Dropdown>
+                  <MenuButton color="primary" variant="solid" endDecorator={<ArrowDropDown />}>
+                    Signup
+                  </MenuButton>
+                  <Menu variant="soft" placement="bottom">
+                    <MenuItem component={RouterLink} href={paths['auth.custom.sign-up.user']}>
+                      Signup as a User
+                    </MenuItem>
+                    <MenuItem component={RouterLink} href={paths['auth.custom.sign-up.agent']}>
+                      Signup as an Agent
+                    </MenuItem>
+                  </Menu>
+                </Dropdown>
               </Stack>
             </Stack>
           </motion.div>

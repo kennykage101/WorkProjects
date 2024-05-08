@@ -6,6 +6,8 @@ import TabList from '@mui/joy/TabList';
 import Tabs from '@mui/joy/Tabs';
 import { Helmet } from 'react-helmet-async';
 
+// import { useSearchParams } from 'react-router-dom';
+
 import { config } from '@/config';
 import { paths } from '@/paths';
 import { SignInForm } from '@/components/auth/custom/sign-in-form';
@@ -18,6 +20,9 @@ const metadata = {
 };
 
 export function Page() {
+  // const [searchParams] = useSearchParams();
+  // const login = searchParams.get('login');
+  // const signup = searchParams.get('sign-up')
   return (
     <React.Fragment>
       <Helmet>
@@ -32,10 +37,10 @@ export function Page() {
           </Stack>
           <Tabs value="sign-in" variant="custom">
             <TabList>
-              <Tab component={RouterLink} href={paths['auth.custom.sign-in']} value="sign-in">
+              <Tab component={RouterLink} href={paths['auth.custom.sign-in.user']} value="sign-in">
                 Sign In
               </Tab>
-              <Tab component={RouterLink} href={paths['auth.custom.sign-up']} value="sign-up">
+              <Tab component={RouterLink} href={paths['auth.custom.sign-up.user']} value="sign-up">
                 Create Account
               </Tab>
             </TabList>

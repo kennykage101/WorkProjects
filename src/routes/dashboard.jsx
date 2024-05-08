@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 import { AuthGuard } from '@/components/auth/auth-guard';
 import { Layout as AccountLayout } from '@/components/dashboard/account/layout';
 import { Layout as DashboardLayout } from '@/components/dashboard/layout';
-import { Layout as TeamLayout } from '@/components/dashboard/team/layout';
 
 // Account pages
 
@@ -71,11 +70,6 @@ const ProductListPage = React.lazy(() => import('@/pages/dashboard/products/list
 const TasksPage = React.lazy(() => import('@/pages/dashboard/tasks').then((m) => ({ default: m.Page })));
 
 // Team pages
-
-const TeamMembersPage = React.lazy(() => import('@/pages/dashboard/team/members').then((m) => ({ default: m.Page })));
-const TeamPermissionsPage = React.lazy(() =>
-  import('@/pages/dashboard/team/permissions').then((m) => ({ default: m.Page }))
-);
 
 // Other pages
 
@@ -211,24 +205,6 @@ export const routes = [
       {
         path: 'tasks',
         element: <TasksPage />,
-      },
-      {
-        path: 'team',
-        element: (
-          <TeamLayout>
-            <Outlet />
-          </TeamLayout>
-        ),
-        children: [
-          {
-            path: 'members',
-            element: <TeamMembersPage />,
-          },
-          {
-            path: 'permissions',
-            element: <TeamPermissionsPage />,
-          },
-        ],
       },
     ],
   },

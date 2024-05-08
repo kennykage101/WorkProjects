@@ -92,11 +92,10 @@ export function SplitLayout({ children, strategy }) {
           <Stack spacing={{ xs: '48px', sm: '64px', lg: '96px' }} sx={{ maxWidth: 'sm', mx: 'auto' }}>
             <Stack spacing={3}>
               <Typography fontSize="38px" fontWeight="xl" lineHeight="48px" textAlign="center" textColor="inherit">
-                Save Time and Simply Build Better with {config.site.name}
+                Save Time and Simply Travel Better with {config.site.name}
               </Typography>
               <Typography textAlign="center" textColor="neutral.400">
-                Experience A Game-Changing Transformation With Our Powerful Template Designed To Revolutionize Your SaaS
-                Application.
+                Experience A Thrilling, Spectacular Adventure With Our Wonderful Travel Solution Created To Revolutionize Your Journey Life.
               </Typography>
             </Stack>
             <Box

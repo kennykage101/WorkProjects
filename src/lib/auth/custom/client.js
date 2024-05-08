@@ -1,3 +1,6 @@
+import axios from 'axios';
+
+// import data from '../../../data/HAYAAN.postman_collection.json';
 function generateToken() {
   const arr = new Uint8Array(12);
   window.crypto.getRandomValues(arr);
@@ -13,23 +16,42 @@ const user = {
 };
 
 class AuthClient {
-  async signUp(_) {
+  async userSignUp(values) {
     const token = generateToken();
     localStorage.setItem('custom-auth-token', token);
-
+    console.log(values);
+    try {
+      const response = await axios.post('http://196.188.172.182:8030/api/v1/users', {
+        ...values,
+      });
+      const data = await response.data;
+    console.log(data)
+    } catch (error) {
+      console.error('Error', error);
+    }
     return {};
   }
 
-  async signInWithOAuth(_) {
-    return {
-      error: 'Social authentication not implemented',
-    };
+  async agentSignUp(values) {
+    const token = generateToken();
+    localStorage.setItem('custom-auth-token', token);
+    console.log(values);
+    try {
+      const response = await axios.post('http://196.188.172.182:8030/api/v1/agents', {
+        ...values,
+      });
+      const data = await response.data;
+      console.log(data);
+    } catch (error) {
+      console.error('Error', error);
+    }
+    return {};
   }
 
   async signInWithPassword(params) {
-    const { email, password } = params;
+    const { username, password } = params;
 
-    if (email !== 'rene@devias.io' || password !== 'Secret1') {
+    if (username !== 'rene@devias.io' || password !== 'Secret1') {
       return {
         error: 'Invalid credentials',
       };

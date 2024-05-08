@@ -6,7 +6,6 @@ import Typography from '@mui/joy/Typography';
 import { CoinVertical as CoinVerticalIcon } from '@phosphor-icons/react/dist/ssr/CoinVertical';
 import { ShoppingCart as ShoppingCartIcon } from '@phosphor-icons/react/dist/ssr/ShoppingCart';
 import { UsersThree as UsersThreeIcon } from '@phosphor-icons/react/dist/ssr/UsersThree';
-import dayjs from 'dayjs';
 import { Helmet } from 'react-helmet-async';
 
 import { config } from '@/config';
@@ -116,35 +115,35 @@ export function Page() {
                   emails={[
                     {
                       id: 'EM-005',
-                      receivedAt: dayjs().subtract(5, 'minute').valueOf(),
+                      receivedAt: 'March 12',
                       senderAvatar: '/assets/avatar-5.png',
                       senderName: 'Olly Schroeder',
                       subject: 'Hey, would you like to collaborate?',
                     },
                     {
                       id: 'EM-004',
-                      receivedAt: dayjs().subtract(15, 'minute').valueOf(),
+                      receivedAt: 'April 3',
                       senderAvatar: '/assets/avatar-2.png',
                       senderName: 'Sienna Hewitt',
                       subject: "Well it's a really easy one, I'm sure we can make it half of the price.",
                     },
                     {
                       id: 'EM-003',
-                      receivedAt: dayjs().subtract(23, 'minute').valueOf(),
+                      receivedAt: 'June 2',
                       senderAvatar: '/assets/avatar-1.png',
                       senderName: 'Zaid Schwartz',
                       subject: "Sure thing, I'll have a look today. They're looking great!",
                     },
                     {
                       id: 'EM-002',
-                      receivedAt: dayjs().subtract(32, 'minute').valueOf(),
+                      receivedAt: 'Oct 4',
                       senderAvatar: '/assets/avatar-3.png',
                       senderName: 'Ammar Foley',
                       subject: "Hey, nice projects! I really liked the one in react. What's your quote on kinda...",
                     },
                     {
                       id: 'EM-001',
-                      receivedAt: dayjs().subtract(32, 'minute').valueOf(),
+                      receivedAt: 'Sep 3',
                       senderAvatar: '/assets/avatar-3.png',
                       senderName: 'Ammar Foley',
                       subject: "Hey, nice projects! I really liked the one in react. What's your quote on kinda...",

@@ -4,7 +4,6 @@ import * as React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Alert from '@mui/joy/Alert';
 import Button from '@mui/joy/Button';
-import Divider from '@mui/joy/Divider';
 import FormControl from '@mui/joy/FormControl';
 import FormHelperText from '@mui/joy/FormHelperText';
 import FormLabel from '@mui/joy/FormLabel';
@@ -22,32 +21,20 @@ import { z as zod } from 'zod';
 import { paths } from '@/paths';
 import { authClient } from '@/lib/auth/custom/client';
 import { useUser } from '@/hooks/use-user';
-import { Image } from '@/components/core/image';
 import { RouterLink } from '@/components/core/link';
-import { toast } from '@/components/core/toaster';
 
-const oAuthProviders = [
-  {
-    id: 'google',
-    name: 'Google',
-    logo: '/assets/logo-google.svg',
-  },
-  {
-    id: 'discord',
-    name: 'Discord',
-    logo: '/assets/logo-discord.svg',
-  },
-];
 
 const schema = zod.object({
-  email: zod.string().min(1, { message: 'Email is required' }).email(),
-  password: zod.string().min(1, { message: 'Password is required' }),
+  username: zod.string().min(1, { message: 'Username is required' }),
+  password: zod.string().min(6, { message: 'Invalid password' }),
 });
 
 const defaultValues = {
-  email: '',
+  username: '',
   password: '',
 };
+
+
 
 export function SignInForm() {
   const navigate = useNavigate();
@@ -64,21 +51,6 @@ export function SignInForm() {
     resolver: zodResolver(schema),
   });
 
-  const onAuth = React.useCallback(async (provider) => {
-    setIsPending(true);
-
-    const { error } = await authClient.signInWithOAuth({ provider });
-
-    if (error) {
-      setIsPending(false);
-      toast.error(error);
-      return;
-    }
-
-    setIsPending(false);
-
-    // Redirect to OAuth provider
-  }, []);
 
   const onSubmit = React.useCallback(
     async (values) => {
@@ -108,29 +80,10 @@ export function SignInForm() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={3}>
         <Stack spacing={2}>
-          {oAuthProviders.map((provider) => (
-            <Button
-              color="neutral"
-              disabled={isPending}
-              endDecorator={<Image alt="" height={24} src={provider.logo} width={24} />}
-              key={provider.id}
-              onClick={() => {
-                onAuth(provider.id).catch(() => {
-                  // noop
-                });
-              }}
-              variant="outlined"
-            >
-              Continue with {provider.name}
-            </Button>
-          ))}
-        </Stack>
-        <Divider>or</Divider>
-        <Stack spacing={2}>
-          <FormControl color={errors.email ? 'danger' : undefined}>
-            <FormLabel>Email Address</FormLabel>
-            <Input type="email" {...register('email')} />
-            {errors.email ? <FormHelperText>{errors.email.message}</FormHelperText> : null}
+          <FormControl color={errors.username ? 'danger' : undefined}>
+            <FormLabel>Username</FormLabel>
+            <Input type="text" {...register('username')} />
+            {errors.username ? <FormHelperText>{errors.username.message}</FormHelperText> : null}
           </FormControl>
           <FormControl color={errors.password ? 'danger' : undefined}>
             <FormLabel>Password</FormLabel>

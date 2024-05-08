@@ -2,8 +2,10 @@ import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 
 import { Page as CustomAuthResetPasswordPage } from '@/pages/auth/custom/reset-password';
-import { Page as CustomAuthSignInPage } from '@/pages/auth/custom/sign-in';
-import { Page as CustomAuthSignUpPage } from '@/pages/auth/custom/sign-up';
+import { Page as CustomAuthAgentSignInPage } from '@/pages/auth/custom/agent-sign-in';
+import { Page as CustomAuthAgentSignUpPage } from '@/pages/auth/custom/agent-sign-up';
+import { Page as CustomAuthUserSignInPage } from '@/pages/auth/custom/user-sign-in';
+import { Page as CustomAuthUserSignUpPage } from '@/pages/auth/custom/user-sign-up';
 import { Page as SupabaseAuthCallbackPage } from '@/pages/auth/supabase/callback';
 import { Page as SupabaseAuthResetPasswordSentPage } from '@/pages/auth/supabase/recover-link-sent';
 import { Page as SupabaseAuthResetPasswordPage } from '@/pages/auth/supabase/reset-password';
@@ -34,18 +36,34 @@ export const routes = [
         ),
       },
       {
-        path: 'sign-in',
+        path: 'sign-in/agent',
         element: (
           <GuestGuard>
-            <CustomAuthSignInPage />
+            <CustomAuthAgentSignInPage />
           </GuestGuard>
         ),
       },
       {
-        path: 'sign-up',
+        path: 'sign-up/agent',
         element: (
           <GuestGuard>
-            <CustomAuthSignUpPage />
+            <CustomAuthAgentSignUpPage />
+          </GuestGuard>
+        ),
+      },
+      {
+        path: 'sign-in/user',
+        element: (
+          <GuestGuard>
+            <CustomAuthUserSignInPage />
+          </GuestGuard>
+        ),
+      },
+      {
+        path: 'sign-up/user',
+        element: (
+          <GuestGuard>
+            <CustomAuthUserSignUpPage />
           </GuestGuard>
         ),
       },

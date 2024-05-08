@@ -6,7 +6,7 @@ import Card from '@mui/joy/Card';
 import Sheet from '@mui/joy/Sheet';
 import Stack from '@mui/joy/Stack';
 import Typography from '@mui/joy/Typography';
-import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+
 
 import { NoSSR } from '@/components/core/no-ssr';
 
@@ -45,42 +45,7 @@ export function Orders({ data = [] }) {
         ))}
       </Stack>
       <NoSSR fallback={<Box sx={{ height: `${chartHeight}px` }} />}>
-        <ResponsiveContainer height={chartHeight}>
-          <BarChart data={data} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
-            <CartesianGrid stroke="var(--joy-palette-neutral-300)" strokeDasharray="1 4" vertical={false} />
-            <XAxis
-              axisLine={false}
-              dataKey="name"
-              tick={{
-                fill: 'var(--joy-palette-text-secondary)',
-                fontSize: 'var(--joy-fontSize-xs)',
-              }}
-              tickLine={false}
-              type="category"
-            />
-            <YAxis
-              axisLine={false}
-              tick={{
-                fill: 'var(--joy-palette-text-secondary)',
-                fontSize: 'var(--joy-fontSize-xs)',
-              }}
-              tickLine={false}
-              type="number"
-            />
-            {bars.map((bar) => (
-              <Bar
-                animationDuration={300}
-                barSize={16}
-                dataKey={bar.dataKey}
-                fill={bar.color}
-                key={bar.name}
-                name={bar.name}
-                radius={[6, 6, 6, 6]}
-              />
-            ))}
-            <Tooltip animationDuration={200} content={<TooltipContent />} cursor={false} />
-          </BarChart>
-        </ResponsiveContainer>
+      Sorry
       </NoSSR>
     </Card>
   );

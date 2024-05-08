@@ -8,7 +8,6 @@ import ListItem from '@mui/joy/ListItem';
 import ListItemContent from '@mui/joy/ListItemContent';
 import ListItemDecorator from '@mui/joy/ListItemDecorator';
 import Typography from '@mui/joy/Typography';
-import dayjs from 'dayjs';
 
 import { getInitials } from '@/lib/get-initials';
 
@@ -33,7 +32,7 @@ export function Inbox({ emails = [] }) {
                   </Typography>
                 </ListItemContent>
                 <Typography level="body-xs" whiteSpace="nowrap">
-                  {dayjs().diff(email.receivedAt, 'minute')} min ago
+                  4 min ago
                 </Typography>
               </ListItem>
               {index < emails.length - 1 ? <ListDivider /> : null}

@@ -1,8 +1,10 @@
 export const paths = {
   home: '/',
 
-  'auth.custom.sign-in': '/auth/custom/sign-in',
-  'auth.custom.sign-up': '/auth/custom/sign-up',
+  'auth.custom.sign-in.agent': '/auth/custom/sign-in/agent',
+  'auth.custom.sign-up.agent': '/auth/custom/sign-up/agent',
+  'auth.custom.sign-in.user': '/auth/custom/sign-in/user',
+  'auth.custom.sign-up.user': '/auth/custom/sign-up/user',
   'auth.custom.reset-password': '/auth/custom/reset-password',
 
   'auth.supabase.callback': '/auth/supabase/callback',
