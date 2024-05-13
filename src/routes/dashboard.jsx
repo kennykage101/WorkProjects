@@ -19,7 +19,7 @@ const AccountSecurityPage = React.lazy(() =>
 
 // Dashboard pages
 
-const OverviewPage = React.lazy(() => import('@/pages/dashboard/overview').then((m) => ({ default: m.Page })));
+const FlightsPage = React.lazy(() => import('@/pages/dashboard/flights').then((m) => ({ default: m.Page })));
 const SmartHomePage = React.lazy(() => import('@/pages/dashboard/smart-home').then((m) => ({ default: m.Page })));
 const LogisticsPage = React.lazy(() => import('@/pages/dashboard/logistics').then((m) => ({ default: m.Page })));
 const AnalyticsPage = React.lazy(() => import('@/pages/dashboard/analytics').then((m) => ({ default: m.Page })));
@@ -90,7 +90,7 @@ export const routes = [
     children: [
       {
         index: true,
-        element: <OverviewPage />,
+        element: <FlightsPage />,
       },
       {
         path: 'account',
